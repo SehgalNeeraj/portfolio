@@ -1,0 +1,29 @@
+body {
+  background-color: black;
+  display: inline;
+}
+
+h1 {
+  color: red;
+}
+
+.flex-container {
+  border: 1px solid blue;
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+
+.flex-container > div {
+  border: 1px dashed green;
+  flex: 1;
+  color:white
+}
+
+.flex-container > :first-child{
+  color:orange;
+}
+
+.flex-container > div:nth-child(3) {
+  color: yellow;
+}
