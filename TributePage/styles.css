@@ -1,0 +1,21 @@
+#title-div,#tribute-info {
+  border: 1px solid black;
+  text-align: center;
+  background-color: lightgrey;
+}
+
+#image {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-self: center;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 12px;
+}
+p{
+    text-align: center;
+}
