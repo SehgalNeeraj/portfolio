@@ -1,11 +1,15 @@
-#title-div,#tribute-info {
-  border: 1px solid black;
+.text-prop {
   text-align: center;
-  background-color: lightgrey;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 11px;
+}
+
+#title-div,
+#tribute-info {
+  background-color: lightgray;
 }
 
 #image {
-  width: 70%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -14,8 +18,9 @@
 
 figcaption {
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
 }
-p{
-    text-align: center;
+
+ul {
+  list-style-position: inside;
 }
