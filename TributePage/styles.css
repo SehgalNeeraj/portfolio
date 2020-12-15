@@ -1,21 +1,40 @@
 .text-prop {
   text-align: center;
-  font-family: Verdana, Roboto, Geneva, Tahoma, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", Arial, sans-serif;
   font-size: medium;
 }
 
-#title-div,
-#tribute-info {
+.light-mode {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: whitesmoke;
+}
+
+#title-div-light-mode,
+#tribute-info-light-mode,
+#tribute-link-light-mode {
   background-color: lightgray;
+  color: black;
+}
+
+#title-div-dark-mode,
+#tribute-info-dark-mode,
+#tribute-link-dark-mode {
+  background-color: gray;
+  color: white;
 }
 
 #image {
   margin-left: auto;
   margin-right: auto;
-  display:flex;
+  display: flex;
   align-self: center;
   width: 70%;
-  background-color: lightgray;
 }
 
 figcaption {
@@ -25,4 +44,17 @@ figcaption {
 
 ul {
   list-style-position: inside;
+  padding-left: 30%;
+  padding-right: 30%;
+  text-align: left;
+}
+
+li {
+  margin: 16px;
+}
+
+#testimony {
+  padding-left: 30%;
+  padding-right: 30%;
+  text-align: left;
 }
