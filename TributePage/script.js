@@ -6,12 +6,12 @@ function toggleBtn() {
   if (body.classList.contains("light-mode")) {
     body.classList.replace("light-mode", "dark-mode");
     document.getElementById("title-div-light-mode").id = "title-div-dark-mode";
-    document.getElementById("tribute-info-light-mode").id =
+    document.getElementById("tribute-info").id =
       "tribute-info-dark-mode";
   } else {
     body.classList.replace("dark-mode", "light-mode");
     document.getElementById("title-div-dark-mode").id = "title-div-light-mode";
     document.getElementById("tribute-info-dark-mode").id =
-      "tribute-info-light-mode";
+      "tribute-info";
   }
 }
