@@ -1,0 +1,29 @@
+:root {
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  font-size: larger;
+  color: black;
+  font-size: xx-large;
+}
+
+p,
+ul {
+  font-size: large;
+  color: #4d4e53;
+  padding-left: 1vw;
+}
+
+li {
+  margin-top: 1vw;
+  margin-left: 1vw;
+}
+.highlight {
+  padding: 1vw;
+  background-color: #f7f7f7;
+  font-size: medium;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
