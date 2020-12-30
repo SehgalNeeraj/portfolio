@@ -9,6 +9,25 @@ header {
   font-size: xx-large;
 }
 
+#box-container {
+  display: flex;
+  flex-direction: row;
+}
+#box-1 {
+  display:block;
+  border-color: black;
+  border-style: solid;
+  border-left: inherit;
+  border-top: inherit;
+  width: 60%;
+  border-bottom: inherit;
+  flex-direction: column;
+}
+
+#box-2 {
+  margin-left: 2vw;
+}
+
 p,
 ul {
   font-size: large;
@@ -26,4 +45,22 @@ li {
   font-size: medium;
   margin-left: 1vw;
   margin-right: 1vw;
+}
+
+.top-border {
+  background-color: gray;
+  height: 5vw;
+  margin: 1vw -1vw 0vw -1vw;
+}
+
+a:link,
+a:visited {
+  color: initial;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:link:active,
+a:visited:active {
+  color: initial;
 }
