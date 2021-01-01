@@ -7,45 +7,65 @@
   <body>
     <div id="top-border"></div>
     <div id="box-container" class="flexbox">
-      <div id="navbar">
+      <nav id="navbar">
         <div>
           <header>JS Documentation</header>
         </div>
         <div id="box-1" class="container">
           <div class="item1">
-            <a href="#Introduction">Introduction</a>
+            <a href="#Introduction" class="nav-link">Introduction</a>
           </div>
           <div class="item2">
-            <a href="#What_you_should_already_know"
+            <a href="#What_you_should_already_know" class="nav-link"
               >What you should already know
             </a>
           </div>
           <div class="item3">
-            <a href="#JavaScript_and_Java"> JavaScript and Java</a>
+            <a href="#JavaScript_and_Java" class="nav-link">
+              JavaScript and Java</a
+            >
           </div>
-          <div class="item4"><a href="#Hello_world"> Hello world</a></div>
-          <div class="item5"><a href="#Variables"> Variables</a></div>
+          <div class="item4">
+            <a href="#Hello_world" class="nav-link"> Hello world</a>
+          </div>
+          <div class="item5">
+            <a href="#Variables" class="nav-link"> Variables</a>
+          </div>
           <div class="item6">
-            <a href="#Declaring_variables"> Declaring variables</a>
+            <a href="#Declaring_variables" class="nav-link">
+              Declaring variables</a
+            >
           </div>
-          <div class="item7"><a href="#Variable_scope">Variable scope</a></div>
+          <div class="item7">
+            <a href="#Variable_scope" class="nav-link">Variable scope</a>
+          </div>
           <div class="item8">
-            <a href="#Global_variables"> Global variables</a>
+            <a href="#Global_variables" class="nav-link"> Global variables</a>
           </div>
-          <div class="item9"><a href="#Constants"> Constants</a></div>
-          <div class="item10"><a href="#Data_types"> Data types</a></div>
+          <div class="item9">
+            <a href="#Constants" class="nav-link"> Constants</a>
+          </div>
+          <div class="item10">
+            <a href="#Data_types" class="nav-link"> Data types</a>
+          </div>
           <div class="item11">
-            <a href="#if...else_statement"> if...else statement</a>
+            <a href="#if...else_statement" class="nav-link">
+              if...else statement</a
+            >
           </div>
           <div class="item12">
-            <a href="#while_statement"> while statement</a>
+            <a href="#while_statement" class="nav-link"> while statement</a>
           </div>
           <div class="item13">
-            <a href="#Function_declarations"> Function declarations</a>
+            <a href="#Function_declarations" class="nav-link">
+              Function declarations</a
+            >
           </div>
-          <div class="item14"><a href="#Reference"> Reference</a></div>
+          <div class="item14">
+            <a href="#Reference" class="nav-link"> Reference</a>
+          </div>
         </div>
-      </div>
+      </nav>
       <div id="content">
         <main id="main-doc">
           <section id="Introduction" class="main-section">
@@ -139,8 +159,10 @@
               write your first "Hello world" JavaScript code:
             </p>
             <p class="highlight">
-              function greetMe(yourName) { alert("Hello " + yourName); }<br /><br />
-              greetMe("World");
+              <code
+                >function greetMe(yourName) { alert("Hello " + yourName); }<br /><br />
+                greetMe("World");</code
+              >
             </p>
             <p>
               Select the code in the pad and hit Ctrl+R to watch it unfold in
@@ -169,23 +191,22 @@
             </p>
           </section>
           <section id="Declaring_variables" class="main-section">
-            <p></p>
             <header>Declaring variables</header>
             <p>You can declare a variable in three ways:</p>
             <p>With the keyword var. For example,</p>
-            <p class="highlight">var x = 42.</p>
+            <p class="highlight"><code>var x = 42.</code></p>
             <p>
               This syntax can be used to declare both local and global
               variables.
             </p>
             <p>By simply assigning it a value. For example,</p>
-            <p class="highlight">x = 42.</p>
+            <p class="highlight"><code>x = 42.</code></p>
             <p>
               This always declares a global variable. It generates a strict
               JavaScript warning. You shouldn't use this variant.
             </p>
             <p>With the keyword let. For example,</p>
-            <p class="highlight">let y = 13.</p>
+            <p class="highlight"><code>let y = 13.</code></p>
             <p>
               This syntax can be used to declare a block scope local variable.
               See Variable scope below.
@@ -209,16 +230,15 @@
               the block, which in this case is an if statement.
             </p>
             <p class="highlight">
-              if (true) { var x = 5; } console.log(x); // 5
+              <code> if (true) { var x = 5; } console.log(x); // 5</code>
             </p>
             <p>
               This behavior changes, when using the let declaration introduced
               in ECMAScript 2015.
             </p>
             <p class="highlight">
-              if (true) { let y = 5; } console.log(y); // ReferenceError: y is
-              not
-              <br />defined
+              <code> if (true) { let y = 5; } console.log(y); </code>//
+              ReferenceError: y is not <br />defined
             </p>
           </section>
           <section id="Global_variables" class="main-section">
@@ -244,7 +264,7 @@
               identifier: it must start with a letter, underscore or dollar sign
               and can contain alphabetic, numeric, or underscore characters.
             </p>
-            <p class="highlight">const PI = 3.14;</p>
+            <p class="highlight"><code>const PI = 3.14;</code></p>
             <p>
               A constant cannot change value through assignment or be
               re-declared while the script is running. It has to be initialized
@@ -260,16 +280,21 @@
               variable in the same scope.
             </p>
             <p class="highlight">
-              For example: // THIS WILL CAUSE AN ERROR function f() {}; const f
-              = 5; // THIS WILL <br />CAUSE AN ERROR function f() { const g = 5;
-              var g; //statements <br />}
+              For example: // THIS WILL CAUSE AN ERROR
+              <code>function f() {}; const f = 5; </code>// THIS WILL
+              <br />CAUSE AN ERROR
+              <code>function f() { const g = 5; var g; </code>//statements
+              <br />}
             </p>
             <p>
               However, object attributes are not protected, so the following
               statement is executed without problems.
             </p>
             <p class="highlight">
-              const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";
+              <code>
+                const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
+                "otherValue";</code
+              >
             </p>
           </section>
           <section id="Data_types" class="main-section">
@@ -311,7 +336,9 @@
               the condition is false. An if statement looks as follows:
             </p>
             <p class="highlight">
-              if (condition) { statement_1; } else { statement_2; }
+              <code>
+                if (condition) { statement_1; } else { statement_2; }</code
+              >
             </p>
             <p>
               condition can be any expression that evaluates to true or false.
@@ -383,7 +410,7 @@
               The following while loop iterates as long as n is less than three:
             </p>
             <p class="highlight">
-              var n = 0; var x = 0; while (n < 3) { n++; x += n; }
+              <code> var n = 0; var x = 0; while (n < 3) { n++; x += n; }</code>
             </p>
             <p>
               With each iteration, the loop increments n and adds that value to
@@ -419,7 +446,7 @@
               square:
             </p>
             <p class="highlight">
-              function square(number) { return number * number; }
+              <code> function square(number) { return number * number; }</code>
             </p>
             <p>
               The function square takes one argument, called number. The
