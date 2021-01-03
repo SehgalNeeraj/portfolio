@@ -9,43 +9,78 @@
       <div class="flexbox" id="main-container">
         <section class="container" id="header">
           <div class="item" id="header-item1">
-            <p>Original Trambones</p>
+            <img
+              src="https://s3.amazonaws.com/freecodecamp/original_trombones.png"
+              alt="Original Trambones"
+              width="300px"
+              id="header-img"
+            />
           </div>
           <div class="item" id="header-item2">
-            <p>Features</p>
+            <a href="#">Features</a>
           </div>
           <div class="item" id="header-item3">
-            <p>How It Works</p>
+            <a href="#">How It Works</a>
           </div>
           <div class="item" id="header-item4">
-            <p>Pricing</p>
+            <a href="#">Pricing</a>
           </div>
         </section>
         <section class="flexbox" id="form-container">
-          <form action="submit">Submit</form>
+          <div>
+            <form action="https://www.freecodecamp.com/email-submit" id="form1">
+              <label id="text">Handcrafted, home-made masterpieces</label>
+              <br />
+              <label for="email"></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+              /><br />
+              <button type="submit" form="form1" value="Submit">
+                GET STARTED
+              </button>
+            </form>
+          </div>
         </section>
         <section class="container" id="product-desc">
           <div class="item" id="prod-item1">
-            <p>Fire</p>
+            <i class="fa fa-scissors"></i>
           </div>
           <div class="item" id="prod-item2">
-            <p>It's Burning</p>
+            <p>Premium Materials</p>
+            <p>
+              Our trombones use the shiniest brass which is sourced locally.
+              This will increase the longevity of your purchase.
+            </p>
           </div>
           <div class="item" id="prod-item3">
             <p>Water</p>
           </div>
           <div class="item" id="prod-item4">
-            <p>It's Wet</p>
+            <p>Fast Shipping</p>
+            <p>
+              We make sure you recieve your trombone as soon as we have finished
+              making it. We also provide free returns if you are not satisfied.
+            </p>
           </div>
           <div class="item" id="prod-item5">
             <p>Air</p>
           </div>
           <div class="item" id="prod-item6">
-            <p>It's Windy</p>
+            <p>Quality Assurance</p>
+            <p>
+              For every purchase you make, we will ensure there are no damages
+              or faults and we will check and test the pitch of your instrument.
+            </p>
           </div>
         </section>
         <section class="flexbox" id="video-container">
-          <p>video-container::flexbox</p>
+          <video width="320" height="240" controls>
+            <source src="https://youtu.be/y8Yv4pnO7qc" />
+            Your browser does not support the video tag.
+          </video>
         </section>
         <section class="container" id="price-container">
           <div class="item" id="price-item1">
@@ -58,13 +93,13 @@
             <p>VALVE TROMBONE</p>
           </div>
           <div class="item" id="price-item4">
-            <p><strong>$600</strong></p>
+            <p>$600</p>
           </div>
           <div class="item" id="price-item5">
-            <p><strong>$900</strong></p>
+            <p>$900</p>
           </div>
           <div class="item" id="price-item6">
-            <p><strong>$1200</strong></p>
+            <p>$1200</p>
           </div>
           <div class="item" id="price-item7">
             <p>
@@ -85,13 +120,25 @@
             </p>
           </div>
           <div class="item" id="price-item10">
-            <p>Put Button</p>
+            <input
+              type="button"
+              value="SELECT"
+              onclick="alert('You clicked on: SELECT button');"
+            />
           </div>
           <div class="item" id="price-item11">
-            <p>Put Button</p>
+            <input
+              type="button"
+              value="SELECT"
+              onclick="alert('You clicked on: SELECT button');"
+            />
           </div>
           <div class="item" id="price-item12">
-            <p>Put Button</p>
+            <input
+              type="button"
+              value="SELECT"
+              onclick="alert('You clicked on: SELECT button');"
+            />
           </div>
         </section>
         <section class="container" id="footer-container">
