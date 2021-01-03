@@ -1,9 +1,9 @@
 :root {
+  font-family: "Lato", sans-serif;
+  background-color: #eee;
   --btn-background: #f1c40f;
   --margin-top: 3vmin;
-  background-color: #eee;
   --footer-background: #ddd;
-  font-family: "Lato", sans-serif;
 }
 
 .flexbox {
@@ -23,10 +23,10 @@
 
 #nav-bar {
   width: 100%;
-  height: 5%;
   position: fixed;
   background-color: #eee;
 }
+
 img {
   padding-right: 60%;
 }
@@ -38,7 +38,6 @@ a {
   align-items: center;
   justify-content: center;
   height: 40vmin;
-  position: relative;
   padding-top: 2vxmax;
 }
 
@@ -154,4 +153,16 @@ button[type="submit"] {
 }
 
 @media (max-width: 650px) {
+}
+
+a:link,
+a:visited {
+  color: initial;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:link:active,
+a:visited:active {
+  color: initial;
 }
