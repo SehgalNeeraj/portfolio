@@ -75,3 +75,9 @@ h2 {
   grid-auto-flow: row;
   background-color: var(--main-blue);
 }
+
+.project-tile{
+  min-width: 15vw;
+  min-height: 15vh;
+  flex-direction: column;
+}
