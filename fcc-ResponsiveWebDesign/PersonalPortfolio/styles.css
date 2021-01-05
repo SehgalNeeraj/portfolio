@@ -1,0 +1,83 @@
+:root {
+  background-color: white;
+  font-family: "Raleway", sans-serif;
+  --main-red: #be3143;
+  --main-white: #f0f0f0;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+.flexbox {
+  display: flex;
+  flex-direction: column;
+}
+
+#front-page {
+  width: 100vw;
+  height: 100vh;
+  border-color: black;
+  border-style: solid;
+  flex-direction: column;
+  margin-left: -1vw;
+  margin-right: -1vw;
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  border-color: black;
+  border-style: dashed;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+  background-color: var(--main-red);
+  margin-top: -2vh;
+}
+
+.nav-link {
+  margin-right: 5vmin;
+  align-self: center;
+  color: var(--main-white);
+  font-size: x-large;
+}
+
+#welcome-section {
+  border-color: green;
+  border-style: dashed;
+  flex-direction: column;
+  height: 98.5vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-gray);
+}
+
+h1 {
+  margin-bottom: 0%;
+  color: var(--main-white);
+  font-size: 3vmax;
+  font-weight: bolder;
+}
+h2 {
+  margin-top: 1%;
+  color: var(--main-red);
+  font-size: 2em;
+  font-weight: lighter;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-auto-flow: row;
+  background-color: var(--main-blue);
+}
+
+.project-tile{
+  min-width: 15vw;
+  min-height: 15vh;
+  flex-direction: column;
+}
