@@ -44,3 +44,5 @@ for district in delhiDistricts:
                 handle.write(content)
     else:
         continue  # NOT OK
+
+handle.close()    
