@@ -1,8 +1,4 @@
 # Time Calculator
-import unittest
-class UnitTests(unittest.TestCase):
-    pass
-
 class myDateTime:
     days = 0
     hours = 0

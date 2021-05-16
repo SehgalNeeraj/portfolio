@@ -1,7 +1,5 @@
 import unittest
 from time_calculator import add_time
-
-
 class UnitTests(unittest.TestCase):
 
     def test_same_period(self):
