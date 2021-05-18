@@ -1,25 +1,38 @@
-# This entrypoint file to be used in development. Start by reading README.md
-import budget
-from budget import create_spend_chart
-from unittest import main
+class Category:
+    budget_category = ""
+    ledger_list = []
+    balance = 0
 
-food = budget.Category("Food")
-food.deposit(1000, "initial deposit")
-food.withdraw(10.15, "groceries")
-food.withdraw(15.89, "restaurant and more food for dessert")
-print(food.get_balance())
-clothing = budget.Category("Clothing")
-food.transfer(50, clothing)
-clothing.withdraw(25.55)
-clothing.withdraw(100)
-auto = budget.Category("Auto")
-auto.deposit(1000, "initial deposit")
-auto.withdraw(15)
+    def __init__(self, budgetCat):
+        self.budget_category = budgetCat
+        self.balance = 0
 
-print(food)
-print(clothing)
+    def deposit(self, amount, description=""):
+        self.balance = self.balance + amount
+        depositObj = '{"amount":{amount},"description":{description}}'
+        self.ledger_list.append(depositObj)
 
-print(create_spend_chart([food, clothing, auto]))
+    def withdraw(self, amount, description=""):
+        if (self.check_funds(amount) is False):
+            return False
 
-# Run unit tests automatically
-main(module='test_module', exit=False)
+        self.balance = self.balance - amount
+        withdrawObj = '{"amount":{-1 * amount},"description":{description}}'
+        self.ledger_list.append(withdrawObj)
+
+        return True
+
+    def get_balance(self):
+        return self.balance
+
+    def transfer(self,amount,cat_obj):
+        pass
+
+    def check_funds(self, amount):
+        if (amount > self.balance):
+            return False
+
+        return True
+
+def create_spend_chart(categories):
+    pass
