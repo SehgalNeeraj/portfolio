@@ -6,7 +6,7 @@ class Category:
     def __init__(self, budgetCat):
         self.budget_category = budgetCat
         self.balance = 0
-        self.ledger=[]
+        self.ledger = []
 
     def deposit(self, amount, description=""):
         self.balance = self.balance + amount
@@ -45,17 +45,19 @@ class Category:
         return True
 
     def __str__(self):
-        length = len(self.budget_category)
-        decorator = "*"
-        range_decorator = int((30-length)/2)
-        printName = decorator*range_decorator + self.budget_category
-        printName = printName + (30-len(printName))*decorator
+        printName = '{:*^30}'.format(self.budget_category)
 
         printItem = ""
         for item in self.ledger:
-            printItem = printItem + item + "\n"
+            desc = item.find("n:")
+            amount_start = item.find(":")
+            amount_end = item.find(",")
+            printItem = printItem + '{:<23}'.format(item[desc+2:-1][:23]) + \
+                " " + \
+                '{:>-7.2f}'.format(float(item[amount_start+1:amount_end]))+"\n"
 
-        return (printName+"\n"+printItem)
+        totalStr = "Total: "+str(self.get_balance())
+        return (printName+"\n"+printItem+"\n"+totalStr)
 
 
 def create_spend_chart(categories):
