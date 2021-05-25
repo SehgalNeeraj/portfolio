@@ -1,12 +1,12 @@
+import math
+
+
 class Category:
     """[base level class to create Category objects]
 
     Returns:
         [none]: [returns nothing]
     """
-    budget_category = ""
-    ledger = []
-    balance = 0
 
     def __init__(self, budgetCat):
         """[constructs and initializes the object]
@@ -17,6 +17,7 @@ class Category:
         self.budget_category = budgetCat
         self.balance = 0
         self.ledger = []
+        self.withdraw_per_category = 0.0
 
     def deposit(self, amount, description=''):
         """[summary]
@@ -45,6 +46,7 @@ class Category:
         self.balance = self.balance - amount
         withdrawObj = {f'amount': (-1 * amount), 'description': description}
         self.ledger.append(withdrawObj)
+        self.withdraw_per_category += amount
 
         return True
 
@@ -113,7 +115,7 @@ class Category:
         ledger_items = ""
         for item in self.ledger:
             ledger_items += f"{item['description'][:23]:23}{item['amount']:>7.2f}\n"
-        
+
         return (ledger_items)
 
     def __str__(self):
@@ -130,5 +132,82 @@ class Category:
         return (objectStr)
 
 
+def printCategoryNames(categories):
+    """[summary]
+
+    Args:
+        categories ([type]): [description]
+    """
+
+    # find max length of category Name
+    max_length = 0
+    for category in categories:
+        if (len(category.budget_category) > max_length):
+            max_length = len(category.budget_category)
+
+    response = ""
+    for index in range(max_length):
+        cat_str = "     "
+        for category in categories:
+            try:
+                cat_str += (category.budget_category[index]+"  ")
+            except:
+                cat_str += "   "
+                pass
+        response += cat_str+"\n"
+
+    # remove last "\n"
+    return response[:-1]
+
+
+def calculatePercentSpend(categories):
+    """[summary]
+
+    Args:
+        categories ([type]): [description]
+    """
+    total_spend = 0.0
+    percent_spend_per_category = dict()
+    for category in categories:
+        total_spend += category.withdraw_per_category
+
+    for category in categories:
+        percent_spend_per_category[category.budget_category] = int(
+            math.floor(10*category.withdraw_per_category/total_spend)*10)
+
+    return percent_spend_per_category
+
+
 def create_spend_chart(categories):
-    pass
+    """[create bar chart for spending in categories]
+
+    Args:
+        categories ([list]): [category list]
+
+    Returns:
+        [string]: [bar chart (spending) representation]
+    """
+    # ! IMP: Print Bar Chart horizontally (line by line) with all data
+    percent_spend_per_category = calculatePercentSpend(categories)
+
+    header = "Percentage spent by category\n"
+    spend_data = ""
+
+    for i in range(100, -10, -10):
+        if (i == 0):
+            spend_data += " "
+
+        spend_data += str(i)+"| "
+        for (k, v) in percent_spend_per_category.items():
+            if (i <= v):
+                spend_data += "o  "
+            else:
+                spend_data += "   "
+        spend_data += "\n"+" "
+
+    category_str = printCategoryNames(categories)
+    horizontal_line = "   "+"-"*(len(categories)*3+1)
+    spend_chart = header + spend_data + \
+        horizontal_line + "\n" + category_str
+
+    return spend_chart
