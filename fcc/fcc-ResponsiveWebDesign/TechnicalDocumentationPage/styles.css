@@ -1,0 +1,93 @@
+:root {
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+}
+
+header {
+  font-size: larger;
+  color: black;
+  font-size: xx-large;
+  padding-left: 10px;
+}
+
+.flexbox {
+  display: flex;
+}
+#navbar {
+  width: 20%;
+  position: fixed;
+}
+.container {
+  display: grid;
+}
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6,
+.item7,
+.item8,
+.item9,
+.item10,
+.item11,
+.item12,
+.item13,
+.item14 {
+  border-style: solid;
+  border-color: lightgrey;
+  border-left: inherit;
+  border-bottom: inherit;
+  border-right: inherit;
+  margin: 0.2vw;
+  padding-left: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0vw;
+  font-size: medium;
+}
+
+#content {
+  border-style: solid;
+  border-right: inherit;
+  border-top: inherit;
+  border-bottom: inherit;
+  margin-left: 20%;
+  padding-left: 2vw;
+}
+
+p,
+ul {
+  font-size: large;
+  color: #4d4e53;
+  padding-left: 1.5vw;
+}
+
+li {
+  margin-top: 1vw;
+  margin-left: 4vw;
+}
+.highlight {
+  padding: 1vw;
+  background-color: #f7f7f7;
+  font-size: medium;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+a:link,
+a:visited {
+  color: initial;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:link:active,
+a:visited:active {
+  color: initial;
+}
