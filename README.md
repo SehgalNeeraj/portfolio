@@ -1,4 +1,9 @@
-# Resource Inventory
+# Repository for "minor" and "major" projects
+### Minor Projects included from https://freecodecamp.org
 
-Harvard Learning Resources-
-https://www.youtube.com/playlist?list=PLifX7FLW45Ncn-YnaBPSsVz2HYsW8mfAX
+Certification Projects -
++ Responsive Web Design
++ Scientific Computing with Python
+
+### Major Projects include -
++ E2E system design and code
