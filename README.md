@@ -7,3 +7,7 @@ Certification Projects -
 
 ### Major Projects include -
 + E2E system design and code
++ Frameworks and DB
+
+Javascript
++ Express(server side framework)
