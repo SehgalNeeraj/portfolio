@@ -10,7 +10,8 @@ Certification Projects -
 + Frameworks and DB
 
 Javascript Stack(s)
-+ Express(server side framework), Angular(front end framework)
-+ Next.js (uses React and Node.js)
++ Express(server side framework => https://expressjs.com)
++ Next.js (https://nextjs.org => uses React and Node.js)
 
-
+Python Stacks(s)
++ Django(https://www.djangoproject.com/start/)
