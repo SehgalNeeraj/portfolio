@@ -9,5 +9,8 @@ Certification Projects -
 + E2E system design and code
 + Frameworks and DB
 
-Javascript
-+ Express(server side framework)
+Javascript Stack(s)
++ Express(server side framework), Angular(front end framework)
++ Next.js (uses React and Node.js)
+
+
